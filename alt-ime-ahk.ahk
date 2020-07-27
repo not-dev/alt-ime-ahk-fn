@@ -126,3 +126,14 @@ RAlt up::
         IME_SET(1)
     }
     Return
+
+; 右 Alt で カーソル操作
+
+RAlt & VKDB::Send, {Up}
+RAlt & VKBA::Send, {Left}
+RAlt & VKDE::Send, {Right}
+RAlt & VKBF::Send, {Down}
+RAlt & p::Send, {Home}
+RAlt & VKDD::Send, {End}
+RAlt & l::Send, {PgUp}
+RAlt & VKBE::Send, {PgDn}
