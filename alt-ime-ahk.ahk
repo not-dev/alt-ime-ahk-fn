@@ -109,7 +109,6 @@
 
 ; 上部メニューがアクティブになるのを抑制
 *~LAlt::Send {Blind}{vk07}
-*~RAlt::Send {Blind}{vk07}
 *~RCtrl::Send {Blind}{vk07}
 
 ; 左 Alt 空打ちで IME を OFF
@@ -120,10 +119,9 @@ LAlt up::
     }
     Return
 
-; 右 Alt, 右 Ctrl 空打ちで IME を ON
-RAlt up::
+; 右 Ctrl 空打ちで IME を ON
 RCtrl up::
-    if (A_PriorHotkey == "*~RAlt") or (A_PriorHotkey == "*~RCtrl")
+    if (A_PriorHotkey == "*~RCtrl")
     {
         IME_SET(1)
     }
